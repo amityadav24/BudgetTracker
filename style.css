@@ -1,0 +1,182 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0077cc;
+    font-size: 2.5rem;
+}
+
+.forms {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form {
+    flex: 1;
+    min-width: 300px;
+    background: #eaf4ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.05);
+}
+
+form h2 {
+    margin-bottom: 15px;
+    color: #005999;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #bcdffb;
+    border-radius: 10px;
+    background: #f8fcff;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#incomeForm button {
+    background-color: #28a745;
+}
+
+#incomeForm button:hover {
+    background-color: #218838;
+}
+
+#expenseForm button {
+    background-color: #dc3545;
+}
+
+#expenseForm button:hover {
+    background-color: #c82333;
+}
+
+/* Budget Summary */
+.summary {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #e3f1fd;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.05);
+}
+
+.summary h2 {
+    margin-bottom: 15px;
+    color: #005999;
+}
+
+.summary p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Lists Section */
+.lists {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lists > div {
+    flex: 1;
+    min-width: 300px;
+    background: #f0faff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 119, 204, 0.05);
+}
+
+.lists h3 {
+    margin-bottom: 10px;
+    color: #0077cc;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #ffffff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #0077cc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 119, 204, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .forms, .lists {
+        flex-direction: column;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .container {
+        background-color: #1e1e1e;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    form, .summary, .lists > div {
+        background-color: #2a2a2a;
+        color: #fff;
+        box-shadow: none;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #555;
+    }
+
+    li {
+        background-color: #333;
+        color: #fff;
+        border-left-color: #66b2ff;
+    }
+}
